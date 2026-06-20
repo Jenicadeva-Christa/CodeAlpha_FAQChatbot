@@ -1,6 +1,6 @@
 # PolyBot — FAQ Chatbot
 
-PolyBot is an offline, NLP-powered college/university FAQ chatbot built using Flask, NLTK, and Scikit-Learn. It parses and maps user questions to a pre-defined database of over 400 FAQ entries using TF-IDF vectorization and cosine similarity matching, requiring zero external paid APIs.
+PolyBot is an offline, NLP-powered college/university FAQ chatbot built using Flask, NLTK, and Scikit-Learn. It parses and maps user questions to a pre-defined database of over 40+ FAQ entries using TF-IDF vectorization and cosine similarity matching, requiring zero external paid APIs.
 
 ## How It Works
 
@@ -43,7 +43,7 @@ CodeAlpha_FAQChatbot/
 
 ## Features
 
-- **High-Quality Custom Dataset**: Built-in repository of 412 Q&A pairs covering admissions, fees, hostel rooms, exams, library access, placements, and campus activities.
+- **High-Quality Custom Dataset**: Built-in repository of 41+ Q&A pairs covering admissions, fees, hostel rooms, exams, library access, placements, and campus activities.
 - **WhatsApp/ChatGPT-Style UI**: Modern dark navy theme featuring a glowing send button, animated typing indicator, and responsive bubble layouts.
 - **Auto NLTK Downloader**: Automatically downloads NLTK packages (`punkt`, `stopwords`, `wordnet`, and `omw-1.4`) on the first run.
 - **Enter-to-Send**: Supports standard keyboard triggers for quick sending.
