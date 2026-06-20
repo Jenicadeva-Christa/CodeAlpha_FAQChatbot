@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - PolyBot Info Portal</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome v6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Reusing App CSS styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .info-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            box-shadow: var(--shadow-main);
+            padding: 2.5rem;
+            max-width: 650px;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            animation: fadeInMsg 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .info-card h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--user-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        .info-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-main);
+        }
+        .back-btn {
+            background: var(--user-gradient);
+            color: #ffffff;
+            border: none;
+            outline: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            margin-top: 1rem;
+            align-self: flex-start;
+            box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+            transition: all 0.3s ease;
+        }
+        .back-btn:hover {
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.6);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Decor (Gradient Blobs) -->
+    <div class="bg-decor blob-1"></div>
+    <div class="bg-decor blob-2"></div>
+
+    <div class="info-card">
+        <h1>{{ title }}</h1>
+        <p>{{ content }}</p>
+        <a href="#" onclick="window.close(); return false;" class="back-btn">
+            <i class="fa-solid fa-xmark"></i> Close Tab
+        </a>
+    </div>
+</body>
+</html>

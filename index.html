@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PolyBot - University FAQ Chatbot</title>
+    <meta name="description" content="An NLP-powered chatbot providing instant answers to University FAQ queries about admissions, fees, hostel, library, and placements.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome v6 for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Background Decor (Gradient Blobs) -->
+    <div class="bg-decor blob-1"></div>
+    <div class="bg-decor blob-2"></div>
+
+    <div class="chat-container">
+        <!-- Chat Header -->
+        <header class="chat-header">
+            <div class="bot-info">
+                <div class="header-avatar">🤖</div>
+                <div class="header-text">
+                    <h2>PolyBot</h2>
+                    <span class="status"><i class="fa-solid fa-circle"></i> Online</span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <span class="topic-tag">University FAQ Assistant</span>
+            </div>
+        </header>
+
+        <!-- Chat Window / Scrollable area -->
+        <main id="chat-window" class="chat-window">
+            <!-- Messages will be appended dynamically via JavaScript -->
+            
+            <!-- Typing Indicator (Hidden by default) -->
+            <div id="typing-indicator" class="message bot-message hidden">
+                <div class="avatar">🤖</div>
+                <div class="bubble typing-bubble">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </main>
+
+        <!-- Input Area fixed at bottom -->
+        <footer class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="user-input" placeholder="Ask about admissions, fees, courses, hostel, library..." aria-label="Ask a question" autocomplete="off" required>
+                <button id="send-btn" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
